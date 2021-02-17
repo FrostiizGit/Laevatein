@@ -12,6 +12,6 @@ jobs:
         with:
           host: ${{ secrets.LAEVATEIN_HOST }}
           port: ${{ secrets.LAEVATEIN_PORT }}
-          username: ${{ secrets.LAEVATEIN_USERNAME }}
+          username: ${{ secrets.LAEVATEIN_USER }}
           password: ${{ secrets.LAEVATEIN_PASSWORD }}
           script: whoami
