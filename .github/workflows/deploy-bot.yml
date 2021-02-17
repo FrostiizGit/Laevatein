@@ -11,7 +11,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.LAEVATEIN_HOST }}
+          port: ${{ secrets.LAEVATEIN_PORT }}
           username: ${{ secrets.LAEVATEIN_USERNAME }}
           password: ${{ secrets.LAEVATEIN_PASSWORD }}
-          port: ${{ secrets.LAEVATEIN_PORT }}
           script: whoami
