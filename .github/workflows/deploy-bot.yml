@@ -6,10 +6,10 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: frostiiz-runner
     steps:
       - name: Deploy Laevatin bot
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.2
         with:
           host: ${{ secrets.LAEVATEIN_HOST }}
           username: ${{ secrets.LAEVATEIN_USERNAME }}
