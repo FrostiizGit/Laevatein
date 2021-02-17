@@ -15,6 +15,6 @@ jobs:
           username: ${{ secrets.LAEVATEIN_USER }}
           key: ${{ secrets.LAEVATEIN_KEY }}
           script: |
-            git clone git@github.com:FrostiizGit/laevatein.git
+            git clone git@github.com:FrostiizGit/laevatein.git || echo "Repository already cloned"
             cd laevatein/
             npm install
