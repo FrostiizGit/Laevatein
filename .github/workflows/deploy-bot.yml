@@ -20,5 +20,3 @@ jobs:
             cd laevatein/
             git pull
             npm i
-      - name: Running host script
-        uses: echo "kek"
