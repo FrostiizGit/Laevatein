@@ -7,11 +7,14 @@ jobs:
     name: Build
     runs-on: frostiiz-runner
     steps:
-      - name: Executing command via ssh
+      - name: SSH cloning repo & installing dependencies
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.LAEVATEIN_HOST }}
           port: ${{ secrets.LAEVATEIN_PORT }}
           username: ${{ secrets.LAEVATEIN_USER }}
-          password: ${{ secrets.LAEVATEIN_PASSWORD }}
-          script: whoami
+          key: ${{ secrets.LAEVATEIN_KEY }}
+          script: |
+            git clone git@github.com:FrostiizGit/laevatein.git # clone the repo into the 'app' folder
+            cd laevatein # navigate into the repo
+            npm install # install dependencies
