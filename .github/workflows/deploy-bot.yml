@@ -13,7 +13,7 @@ jobs:
         with:
           host: ${{ secrets.LAEVATEIN_HOST }}
           username: ${{ secrets.LAEVATEIN_USERNAME }}
-          password: ${{ secrets.LAEVATEIN_PASSWORD }}
+          key: ${{ secrets.LAEVATEIN_KEY }}
           port: ${{ secrets.LAEVATEIN_PORT }}
           script: |
             git clone git@github.com:FrostiizGit/laevatein.git
