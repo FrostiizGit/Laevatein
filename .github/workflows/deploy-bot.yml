@@ -1,15 +1,14 @@
-name: Deploy application
-
+name: Deploy Laevatin bot
 on:
   push:
     branches: [master]
-
 jobs:
-  deploy:
+  build:
+    name: Build
     runs-on: frostiiz-runner
     steps:
-      - name: Deploy Laevatin bot
-        uses: appleboy/ssh-action@v0.1.2
+      - name: Executing command via ssh
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.LAEVATEIN_HOST }}
           username: ${{ secrets.LAEVATEIN_USERNAME }}
