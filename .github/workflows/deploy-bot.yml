@@ -15,7 +15,4 @@ jobs:
           username: ${{ secrets.LAEVATEIN_USERNAME }}
           password: ${{ secrets.LAEVATEIN_PASSWORD }}
           port: ${{ secrets.LAEVATEIN_PORT }}
-          script: |
-            git clone git@github.com:FrostiizGit/laevatein.git
-            cd laevatein # navigate into the repo
-            npm install # install dependencies
+          script: whoami
