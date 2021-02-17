@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: frostiiz-runner
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy Laevatin bot
         uses: appleboy/ssh-action@master
