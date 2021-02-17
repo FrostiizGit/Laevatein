@@ -17,7 +17,8 @@ jobs:
           script: |
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
-            git clone git@github.com:FrostiizGit/laevatein.git || echo "Repository already cloned"
             cd laevatein/
-            node -v
-            npm -v
+            git pull
+            npm i
+      - name: Running host script
+        uses: ./laevatein_handler.sh
