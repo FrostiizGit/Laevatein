@@ -21,4 +21,4 @@ jobs:
             git pull
             npm i
       - name: Running host script
-        uses: ./laevatein_handler.sh
+        uses: echo "kek"
